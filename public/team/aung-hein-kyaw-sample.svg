@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Sample portrait for Aung Hein Kyaw</title>
+  <desc id="desc">A stylized sample team portrait with green and amber lighting.</desc>
+  <defs>
+    <linearGradient id="bg" x1="58" x2="454" y1="40" y2="472" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#84c8aa"/>
+      <stop offset=".52" stop-color="#ebd7bd"/>
+      <stop offset="1" stop-color="#7c755d"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="118" x2="394" y1="340" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#13251e"/>
+      <stop offset="1" stop-color="#3b5f4d"/>
+    </linearGradient>
+    <radialGradient id="light" cx="44%" cy="20%" r="64%">
+      <stop offset="0" stop-color="#fffaf2" stop-opacity=".7"/>
+      <stop offset="1" stop-color="#fffaf2" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <rect width="512" height="512" fill="url(#light)"/>
+  <path fill="#27231f" d="M154 210c0-84 42-136 105-137 69-1 108 47 104 137-26-39-61-60-104-62-43-1-78 20-105 62Z"/>
+  <path fill="#dda37f" d="M168 514c8-92 43-144 88-144s80 52 88 144H168Z"/>
+  <path fill="#efbd96" d="M187 218c0-66 29-109 70-109s70 43 70 109c0 75-32 124-70 124s-70-49-70-124Z"/>
+  <path fill="#d8a484" d="M224 330c11 9 22 14 33 14s22-5 33-14v54c-10 14-21 21-33 21s-23-7-33-21v-54Z"/>
+  <path fill="#302b25" d="M187 207c32-9 58-29 77-61 16 28 43 49 80 61-9-70-38-109-87-111-47-2-73 38-70 111Z"/>
+  <path fill="url(#shirt)" d="M92 512c15-97 76-154 164-154s149 57 164 154H92Z"/>
+  <path fill="#f3eee4" d="M223 368c10 15 21 23 34 23s24-8 34-23l20 28-54 68-54-68 20-28Z"/>
+  <path fill="#13251e" fill-opacity=".23" d="M92 512c15-97 76-154 164-154 38 0 71 11 98 31-99 0-169 41-210 123H92Z"/>
+  <circle cx="224" cy="235" r="7" fill="#251d18"/>
+  <circle cx="294" cy="235" r="7" fill="#251d18"/>
+  <path fill="none" stroke="#895e48" stroke-linecap="round" stroke-width="8" d="M239 287c12 8 26 8 40 0"/>
+  <path fill="none" stroke="#f5cfb4" stroke-linecap="round" stroke-width="12" d="M208 211c16-11 31-15 45-11"/>
+  <path fill="none" stroke="#f5cfb4" stroke-linecap="round" stroke-width="12" d="M273 200c17-4 32 0 45 12"/>
+</svg>

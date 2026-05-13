@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Sample portrait for Wai Phyo</title>
+  <desc id="desc">A stylized sample team portrait with teal and warm neutral lighting.</desc>
+  <defs>
+    <linearGradient id="bg" x1="72" x2="440" y1="38" y2="474" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#94d5ce"/>
+      <stop offset=".52" stop-color="#f3dfca"/>
+      <stop offset="1" stop-color="#9e7b6a"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="132" x2="380" y1="334" y2="514" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#10263d"/>
+      <stop offset="1" stop-color="#275b63"/>
+    </linearGradient>
+    <radialGradient id="light" cx="38%" cy="24%" r="62%">
+      <stop offset="0" stop-color="#fffaf2" stop-opacity=".72"/>
+      <stop offset="1" stop-color="#fffaf2" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <rect width="512" height="512" fill="url(#light)"/>
+  <circle cx="256" cy="202" r="106" fill="#2e2a27"/>
+  <path fill="#3a342f" d="M152 204c5-88 57-138 132-128 60 8 88 58 84 128-24-38-61-58-110-60-43-2-80 18-106 60Z"/>
+  <path fill="#d8a483" d="M169 514c7-92 41-143 87-143s80 51 87 143H169Z"/>
+  <path fill="#f0bf9d" d="M188 212c0-63 30-105 72-105s72 42 72 105c0 75-33 124-72 124s-72-49-72-124Z"/>
+  <path fill="#ddaa8b" d="M226 323c10 10 21 15 34 15s24-5 34-15v58c-12 14-23 21-34 21s-22-7-34-21v-58Z"/>
+  <path fill="#2d2825" d="M188 201c30-10 55-28 75-54 17 28 43 46 78 56-10-65-40-101-82-104-44-3-75 32-71 102Z"/>
+  <path fill="url(#shirt)" d="M92 512c15-96 76-153 164-153s149 57 164 153H92Z"/>
+  <path fill="#f5f0e8" d="M221 364c11 18 23 27 35 27s24-9 35-27l21 26-56 72-56-72 21-26Z"/>
+  <path fill="#111827" fill-opacity=".26" d="M92 512c15-96 76-153 164-153 36 0 68 10 94 28-106-7-178 35-214 125H92Z"/>
+  <circle cx="223" cy="229" r="7" fill="#2b211d"/>
+  <circle cx="295" cy="229" r="7" fill="#2b211d"/>
+  <path fill="none" stroke="#8d614d" stroke-linecap="round" stroke-width="8" d="M239 282c13 9 28 9 43 0"/>
+  <path fill="none" stroke="#f4d0b8" stroke-linecap="round" stroke-width="12" d="M209 206c17-12 32-16 45-13"/>
+  <path fill="none" stroke="#f4d0b8" stroke-linecap="round" stroke-width="12" d="M272 193c18-4 33 0 45 12"/>
+</svg>

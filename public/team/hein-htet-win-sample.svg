@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Sample portrait for Hein Htet Win</title>
+  <desc id="desc">A stylized sample team portrait with cool blue studio lighting.</desc>
+  <defs>
+    <linearGradient id="bg" x1="60" x2="452" y1="42" y2="470" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#79b6ce"/>
+      <stop offset=".52" stop-color="#c8d8d3"/>
+      <stop offset="1" stop-color="#776e86"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="124" x2="392" y1="344" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0b1324"/>
+      <stop offset="1" stop-color="#244e72"/>
+    </linearGradient>
+    <radialGradient id="light" cx="62%" cy="20%" r="62%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".68"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <rect width="512" height="512" fill="url(#light)"/>
+  <path fill="#211f23" d="M158 215c-4-91 41-146 113-145 66 1 106 50 101 145-27-41-63-64-108-67-48-4-83 19-106 67Z"/>
+  <path fill="#e0aa86" d="M170 514c8-93 43-144 86-144s78 51 86 144H170Z"/>
+  <path fill="#f1c09a" d="M185 218c0-65 31-110 73-110s73 45 73 110c0 75-35 125-73 125s-73-50-73-125Z"/>
+  <path fill="#dcaa8b" d="M225 330c11 9 22 14 33 14s22-5 33-14v54c-10 14-21 21-33 21s-23-7-33-21v-54Z"/>
+  <path fill="#2b292d" d="M184 210c28-13 50-36 66-68 24 31 56 52 96 63-15-67-47-103-96-108-48-5-75 33-66 113Z"/>
+  <path fill="url(#shirt)" d="M91 512c16-96 76-153 165-153s149 57 165 153H91Z"/>
+  <path fill="#eff6f5" d="M224 369c9 14 20 22 34 22s25-8 34-22l19 27-53 66-53-66 19-27Z"/>
+  <path fill="#0b1324" fill-opacity=".24" d="M421 512H91c11-68 45-116 102-140-32 35-50 82-55 140h283Z"/>
+  <circle cx="225" cy="234" r="7" fill="#261d1a"/>
+  <circle cx="295" cy="234" r="7" fill="#261d1a"/>
+  <path fill="none" stroke="#8e614c" stroke-linecap="round" stroke-width="8" d="M238 287c12 8 27 8 42 0"/>
+  <path fill="none" stroke="#f6d2ba" stroke-linecap="round" stroke-width="12" d="M209 210c15-12 30-16 44-12"/>
+  <path fill="none" stroke="#f6d2ba" stroke-linecap="round" stroke-width="12" d="M274 198c17-4 32 0 45 12"/>
+</svg>

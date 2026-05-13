@@ -163,6 +163,11 @@ describe('siteContent', () => {
       'Hein Htet Win',
       'Aung Hein Kyaw',
     ]);
+    expect(siteContent.aboutPage.people.items.map((person) => person.imageSrc)).toEqual([
+      '/team/wai-phyo-sample.svg',
+      '/team/hein-htet-win-sample.svg',
+      '/team/aung-hein-kyaw-sample.svg',
+    ]);
   });
 
   it('defines accessibility labels used by the hero', () => {
@@ -218,6 +223,9 @@ describe('siteContent', () => {
     expectTypeOf(siteContent.aboutPage.principles[0].title).toEqualTypeOf<'Operations-First'>();
     expectTypeOf(siteContent.aboutPage.ecosystem.logos[0]).toEqualTypeOf<'AWS'>();
     expectTypeOf(siteContent.aboutPage.people.items[0].role).toEqualTypeOf<'Cloud / Platform'>();
+    expectTypeOf(siteContent.aboutPage.people.items[0].imageSrc).toEqualTypeOf<
+      '/team/wai-phyo-sample.svg'
+    >();
     expectTypeOf(siteContent.insightsHeading.title).toEqualTypeOf<'Operational thinking'>();
     expectTypeOf(siteContent.services[0].icon).toEqualTypeOf<'cloud'>();
     expectTypeOf(siteContent.contact.email).toEqualTypeOf<'hello@stackops.example'>();

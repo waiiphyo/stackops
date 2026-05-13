@@ -1,5 +1,9 @@
 import { ArrowUpRight, Braces, Radio, ShieldCheck, Target } from 'lucide-react';
-import { siteContent, type AboutPagePrincipleIcon } from '../content/siteContent';
+import {
+  siteContent,
+  type AboutPagePerson,
+  type AboutPagePrincipleIcon,
+} from '../content/siteContent';
 
 const principleIcons = {
   target: Target,
@@ -13,6 +17,7 @@ export function AboutPage() {
   const marqueeLogos = [...aboutPage.ecosystem.logos, ...aboutPage.ecosystem.logos];
   const titleAccent = 'Only reliable systems.';
   const titleLead = aboutPage.hero.title.replace(titleAccent, '').trim();
+  const people: readonly AboutPagePerson[] = aboutPage.people.items;
 
   return (
     <article className="about-reference-page">
@@ -110,10 +115,14 @@ export function AboutPage() {
         </div>
 
         <div className="about-team-grid">
-          {aboutPage.people.items.map((person) => (
+          {people.map((person) => (
             <article className="about-person-card" key={person.name}>
-              <div className="about-person-photo" aria-hidden="true">
-                <span>{person.monogram}</span>
+              <div className="about-person-photo">
+                {person.imageSrc ? (
+                  <img src={person.imageSrc} alt={`${person.name} sample portrait`} />
+                ) : (
+                  <span>{person.monogram}</span>
+                )}
               </div>
               <h3>{person.name}</h3>
               <p>{person.role}</p>

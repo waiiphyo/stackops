@@ -98,6 +98,7 @@ export type AboutPagePerson = {
   name: string;
   role: string;
   monogram: string;
+  imageSrc?: string;
 };
 
 export type AboutPageContent = {
@@ -421,9 +422,24 @@ export const siteContent = {
       body:
         'The people behind StackOps. Building the cloud operations practice that helps teams run safer, faster, and more reliable systems.',
       items: [
-        { name: 'Wai Phyo', role: 'Cloud / Platform', monogram: 'W' },
-        { name: 'Hein Htet Win', role: 'DevOps / Automation', monogram: 'H' },
-        { name: 'Aung Hein Kyaw', role: 'Security / Operations', monogram: 'A' },
+        {
+          name: 'Wai Phyo',
+          role: 'Cloud / Platform',
+          monogram: 'W',
+          imageSrc: '/team/wai-phyo-sample.svg',
+        },
+        {
+          name: 'Hein Htet Win',
+          role: 'DevOps / Automation',
+          monogram: 'H',
+          imageSrc: '/team/hein-htet-win-sample.svg',
+        },
+        {
+          name: 'Aung Hein Kyaw',
+          role: 'Security / Operations',
+          monogram: 'A',
+          imageSrc: '/team/aung-hein-kyaw-sample.svg',
+        },
       ],
     },
   },

@@ -206,6 +206,9 @@ describe('StackOps landing page', () => {
     expect(screen.getByText(siteContent.aboutPage.founderNote.quote)).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: 'Meet the team.' })).toBeInTheDocument();
     siteContent.aboutPage.people.items.forEach((person) => {
+      expect(
+        screen.getByRole('img', { name: `${person.name} sample portrait` }),
+      ).toHaveAttribute('src', person.imageSrc);
       expect(screen.getByRole('heading', { name: person.name })).toBeInTheDocument();
       expect(screen.getByText(person.role)).toBeInTheDocument();
     });

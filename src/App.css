@@ -1449,11 +1449,19 @@ ol {
   display: grid;
   place-items: center;
   margin: 0 auto 24px;
+  overflow: hidden;
   border-radius: 50%;
   background:
     radial-gradient(circle at 50% 50%, var(--about-cream-soft) 0 28%, transparent 29%),
     linear-gradient(145deg, color-mix(in srgb, var(--about-muted) 30%, transparent), color-mix(in srgb, var(--about-muted) 20%, transparent));
   box-shadow: inset 0 0 0 1px rgba(98, 95, 87, 0.12);
+}
+
+.about-person-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 .about-person-photo span {
