@@ -10,4 +10,12 @@ describe('document metadata', () => {
       '<link rel="icon" type="image/svg+xml" href="/logos/StackOps_mark.svg" />',
     );
   });
+
+  it('applies the saved theme before the app renders', () => {
+    expect(indexHtml).toMatch(/localStorage\.getItem\('stackops-theme'\)/);
+    expect(indexHtml).toMatch(/document\.documentElement\.dataset\.theme = theme;/);
+    expect(indexHtml.indexOf("localStorage.getItem('stackops-theme')")).toBeLessThan(
+      indexHtml.indexOf('<script type="module" src="/src/main.tsx"></script>'),
+    );
+  });
 });

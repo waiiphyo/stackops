@@ -8,6 +8,16 @@
       content="StackOps is a founder-led IT consulting agency for resilient cloud, DevOps, security, and managed operations."
     />
     <link rel="icon" type="image/svg+xml" href="/logos/StackOps_mark.svg" />
+    <script>
+      (function () {
+        try {
+          var theme = localStorage.getItem('stackops-theme') === 'light' ? 'light' : 'dark';
+          document.documentElement.dataset.theme = theme;
+        } catch {
+          document.documentElement.dataset.theme = 'dark';
+        }
+      })();
+    </script>
     <title>StackOps IT Consulting</title>
   </head>
   <body>
