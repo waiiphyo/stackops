@@ -1,5 +1,5 @@
-import { fireEvent, render, screen, within } from '@testing-library/react';
-import { afterEach, beforeEach, describe, expect, it } from 'vitest';
+import { fireEvent, render, screen, waitFor, within } from '@testing-library/react';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import App from '../App';
 import { siteContent } from '../content/siteContent';
 
@@ -12,6 +12,8 @@ describe('StackOps landing page', () => {
   afterEach(() => {
     window.history.pushState({}, '', '/');
     window.localStorage.clear();
+    Reflect.deleteProperty(window.HTMLElement.prototype, 'scrollIntoView');
+    vi.restoreAllMocks();
   });
 
   it('renders the approved navigation and hero CTAs', () => {
@@ -207,6 +209,23 @@ describe('StackOps landing page', () => {
       expect(screen.getByRole('heading', { name: person.name })).toBeInTheDocument();
       expect(screen.getByText(person.role)).toBeInTheDocument();
     });
+  });
+
+  it('scrolls to the requested homepage section after loading with a hash', async () => {
+    window.history.pushState({}, '', '/#work');
+    const scrollIntoView = vi.fn();
+
+    Object.defineProperty(window.HTMLElement.prototype, 'scrollIntoView', {
+      configurable: true,
+      value: scrollIntoView,
+    });
+
+    render(<App />);
+
+    await waitFor(() => {
+      expect(scrollIntoView).toHaveBeenCalledWith({ block: 'start' });
+    });
+    expect(scrollIntoView.mock.contexts[0]).toBe(document.getElementById('work'));
   });
 
   it('shows a local confirmation after a completed contact request', () => {

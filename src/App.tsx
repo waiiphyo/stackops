@@ -12,6 +12,30 @@ import { isAboutPath } from './utils/navigation';
 
 const THEME_STORAGE_KEY = 'stackops-theme';
 
+function getHashTargetId() {
+  const hash = window.location.hash;
+
+  if (!hash) {
+    return '';
+  }
+
+  try {
+    return decodeURIComponent(hash.slice(1));
+  } catch {
+    return hash.slice(1);
+  }
+}
+
+function scrollToCurrentHashTarget() {
+  const targetId = getHashTargetId();
+
+  if (!targetId) {
+    return;
+  }
+
+  document.getElementById(targetId)?.scrollIntoView({ block: 'start' });
+}
+
 function getInitialTheme(): ThemeMode {
   if (typeof window === 'undefined') {
     return 'dark';
@@ -28,6 +52,23 @@ export default function App() {
     window.localStorage.setItem(THEME_STORAGE_KEY, theme);
     document.documentElement.dataset.theme = theme;
   }, [theme]);
+
+  useEffect(() => {
+    if (onAboutPage) {
+      return undefined;
+    }
+
+    const scheduleHashScroll = () => {
+      window.requestAnimationFrame(scrollToCurrentHashTarget);
+    };
+
+    scheduleHashScroll();
+    window.addEventListener('hashchange', scheduleHashScroll);
+
+    return () => {
+      window.removeEventListener('hashchange', scheduleHashScroll);
+    };
+  }, [onAboutPage]);
 
   const toggleTheme = () => {
     setTheme((currentTheme) => (currentTheme === 'dark' ? 'light' : 'dark'));
