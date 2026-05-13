@@ -6,9 +6,11 @@ const appCss = readFileSync(resolve(process.cwd(), 'src/App.css'), 'utf8');
 
 describe('header styles', () => {
   it('uses the approved compact floating header with breathing room', () => {
+    expect(appCss).toMatch(/\.app-shell\s*{[^}]*padding-top: 32px;/s);
     expect(appCss).toMatch(
-      /\.site-header\s*{[^}]*top: 32px;[^}]*min-height: 84px;[^}]*margin-top: 32px;[^}]*padding: 0 24px;/s,
+      /\.site-header\s*{[^}]*top: 32px;[^}]*min-height: 84px;[^}]*margin-top: 0;[^}]*padding: 0 24px;/s,
     );
+    expect(appCss).toMatch(/html\[data-theme="light"\]\s*{[^}]*background: #f6f1e9;/s);
     expect(appCss).not.toMatch(/\.site-header\s*{[^}]*width: min\(1880px, calc\(100vw - 32px\)\);/s);
     expect(appCss).not.toMatch(/\.site-header\s*{[^}]*transform: translateX\(-50%\);/s);
   });
