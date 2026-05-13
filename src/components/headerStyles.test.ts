@@ -5,9 +5,9 @@ import { resolve } from 'node:path';
 const appCss = readFileSync(resolve(process.cwd(), 'src/App.css'), 'utf8');
 
 describe('header styles', () => {
-  it('uses the approved compact floating header spacing', () => {
+  it('uses the approved compact floating header with breathing room', () => {
     expect(appCss).toMatch(
-      /\.site-header\s*{[^}]*top: 12px;[^}]*min-height: 84px;[^}]*margin-top: 12px;[^}]*padding: 0 24px;/s,
+      /\.site-header\s*{[^}]*top: 24px;[^}]*min-height: 84px;[^}]*margin-top: 24px;[^}]*padding: 0 24px;/s,
     );
     expect(appCss).not.toMatch(/\.site-header\s*{[^}]*width: min\(1880px, calc\(100vw - 32px\)\);/s);
     expect(appCss).not.toMatch(/\.site-header\s*{[^}]*transform: translateX\(-50%\);/s);

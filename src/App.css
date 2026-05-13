@@ -139,10 +139,10 @@ ol {
 
 .site-header {
   position: sticky;
-  top: 12px;
+  top: 24px;
   z-index: 20;
   min-height: 84px;
-  margin-top: 12px;
+  margin-top: 24px;
   border: 1px solid var(--line);
   border-radius: 18px;
   padding: 0 24px;
